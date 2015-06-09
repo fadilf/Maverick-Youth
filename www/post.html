@@ -6,7 +6,7 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <title>Maverick Youth</title>
+        <title>Maverick Youth - Posts</title>
     </head>
     <body>
         <ul id="nav">
@@ -32,11 +32,22 @@
                 <span id="title">Maverick Youth</span>
                 <a id="search" href="search.html"></a>
             </div>
-            <div id="display"></div>
+            <article id="article">
+                <h2 id="heading"></h2>
+                <div id="meta"></div>
+                <p id="post"></p>
+            </article>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/get.js"></script>
+        <script type="text/javascript">
+            var id = sessionStorage.getItem("id");
+            $.getJSON("http://www.maverickyouth.com/?json=get_post&id="+id,function(json){
+                $("#heading").html(json.post.title);
+                $("#post").html(json.post.content);
+                $("#meta").html("Posted on "+json.post.date.split(" ")[0]+" by "+json.post.author.name);
+            });
+        </script>
     </body>
 </html>

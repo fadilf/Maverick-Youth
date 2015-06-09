@@ -1,0 +1,204 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Merriweather);
+body {
+    background: #ccc;
+    margin: 0;
+}
+#topbar {
+    background: #222;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: .5s;
+    box-shadow: 0 0 20px #000;
+}
+#title {
+    display: inline-block;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+#menu-b {
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -4px;
+}
+.bar {
+    display: block;
+    height: 0.25em;
+    width: 1.8em;
+    background: #fff;
+    position: relative;
+    margin-top: 5px;
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+    transition: .5s;
+}
+#mb {
+    cursor: pointer;
+    display: block;
+    height: 26px;
+    width: 30px;
+    float: left;
+    outline: 0;
+    margin-top: 1px;
+}
+#search {
+    cursor: pointer;
+    display: block;
+    height: 26px;
+    width: 30px;
+    float: right;
+    outline: 0;
+    margin-top: 1px;
+    margin-right: 5px;
+    background: url(../search.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+#page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    transition: .5s;
+}
+#nav {
+    display: block;
+    position: fixed;
+    height: 100%;
+    background: #222;
+    transition: .5s;
+    padding: 0;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+}
+#nav a {
+    text-decoration: none;
+}
+#nav li {
+    display: block;
+    font-size: 1.2em;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    padding: 10px;
+    background: #111;
+    border-bottom: solid 2px #333;
+    transition: .2s;
+}
+#nav li:hover {
+    background: #333;
+}
+#display {
+    text-align: center;
+    padding-bottom: 70px;
+}
+article:not(#article) {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+    margin: 10px 20px;
+    padding: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 17px -5px #000;
+    color: #222;
+    cursor: pointer;
+}
+.item img {
+    width: 100%;
+}
+article h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1em;
+    text-align: center;
+}
+.item p {
+    font-family: 'Merriweather', serif;
+    font-size: 0.9em;
+}
+#post {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1em;
+    text-align: justify;
+}
+#post img {
+    display: block;
+    margin: 0 auto;
+}
+#article h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.2em;
+    text-align: center;
+}
+#article {
+    padding: 0 5%;
+    padding-bottom: 70px;
+}
+#article p div.ssba a img {
+    display: inline-block;
+    margin: 5px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.more {
+    display: block;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    margin: 10px auto;
+}
+#meta {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    padding: 5px 0;
+}
+@media (max-width: 300px) {
+    article {
+        max-width: 200px;
+    }
+}
+.s-article {
+    text-align: center;
+}
+.search {
+    outline: 0;
+    border: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+#searcht {
+    box-sizing: border-box;
+    padding-left: 10px;
+    width: 70%;
+    height: 35px;
+    border-radius: 10px 0 0 10px;
+    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 455px;
+}
+#searchb {
+    width: 28%;
+    height: 37px;
+    color: #fff;
+    background: #222;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 183px;
+}
