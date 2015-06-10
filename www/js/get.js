@@ -3,6 +3,9 @@ $.getJSON('http://www.maverickyouth.com/?json=get_posts&orderby=date&order=desc&
     total = ini.count_total;
     pages = Math.ceil(total/9);
     after();
+}).fail(function( jqxhr, textStatus, error ) {
+    var err = textStatus + ", " + error;
+    $("#display").html("There was an error.<br><button onclick='location.reload()'>Click to refresh</button>");
 });
 
 
