@@ -50,6 +50,9 @@
                 $("#heading").html(json.post.title);
                 $("#post").html(json.post.content);
                 $("#meta").html("Posted on "+json.post.date.split(" ")[0]+" by "+json.post.author.name);
+            }).fail(function( jqxhr, textStatus, error ) {
+                var err = textStatus + ", " + error;
+                $("#post").html("<span class='mssg'>There was an error.</span><br><button onclick='location.reload()'>Click to refresh</button>");
             });
         </script>
     </body>
