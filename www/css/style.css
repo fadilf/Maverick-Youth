@@ -18,13 +18,13 @@ body {
     display: inline-block;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.4em;
     vertical-align: middle;
 }
 #menu-b {
     vertical-align: middle;
     display: inline-block;
-    margin-top: -4px;
+    margin-top: -2px;
 }
 .bar {
     display: block;
@@ -81,6 +81,15 @@ body {
     left: 0;
     margin-top: 0;
 }
+#nav::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2.5em;
+    background: #333;
+    box-shadow: inset 0 0 20px -3px #000;
+    border-bottom: solid 2px #333;
+}
 #nav a {
     text-decoration: none;
 }
@@ -91,16 +100,56 @@ body {
     font-family: 'Open Sans', sans-serif;
     list-style: none;
     padding: 10px;
-    background: #111;
     border-bottom: solid 2px #333;
     transition: .2s;
+    padding-left: 38px;
+    background-repeat: no-repeat;
+    background-position: 7px 14px;
+    background-size: auto 20px;
 }
-#nav li:hover {
-    background: #333;
+#nav-home {
+    background: url(../home.png), #111;
+}
+#nav-search {
+    background: url(../search.png), #111;
+}
+#nav-settings {
+    background: url(../settings.png), #111;
+}
+#nav-about {
+    background: url(../info.png), #111;
+}
+#nav-home:hover {
+    background: url(../home.png), #333;
+    background-repeat: no-repeat;
+    background-position: 7px 14px;
+    background-size: auto 20px;
+}
+#nav-search:hover {
+    background: url(../search.png), #333;
+    background-repeat: no-repeat;
+    background-position: 7px 14px;
+    background-size: auto 20px;
+}
+#nav-settings:hover {
+    background: url(../settings.png), #333;
+    background-repeat: no-repeat;
+    background-position: 7px 14px;
+    background-size: auto 20px;
+}
+#nav-about:hover {
+    background: url(../info.png), #333;
+    background-repeat: no-repeat;
+    background-position: 7px 14px;
+    background-size: auto 20px;
 }
 #display {
     text-align: center;
     padding-bottom: 70px;
+    font-family: 'Open Sans', sans-serif;
+}
+#mssg {
+    font-size: 1.2em;
 }
 article:not(#article) {
     width: 300px;
@@ -115,30 +164,31 @@ article:not(#article) {
     color: #222;
     cursor: pointer;
 }
+.more {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
 .item img {
     width: 100%;
 }
 article h3 {
     font-family: 'Merriweather', serif;
-    font-size: 1.1em;
     text-align: center;
 }
 .item p {
     font-family: 'Merriweather', serif;
-    font-size: 0.9em;
 }
 #post {
     font-family: 'Merriweather', serif;
-    font-size: 1.1em;
     text-align: justify;
 }
 #post img {
     display: block;
     margin: 0 auto;
 }
-#article h2 {
+#heading {
     font-family: 'Open Sans', sans-serif;
-    font-size: 2.2em;
     text-align: center;
 }
 #article {
@@ -152,12 +202,12 @@ article h3 {
     height: 50px;
     width: 50px;
 }
-.more {
-    display: block;
+button {
+    display: inline-block;
     border-radius: 3px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3em;
-    margin: 10px auto;
+    margin: 10px 0;
 }
 #meta {
     font-family: 'Open Sans', sans-serif;
@@ -201,4 +251,14 @@ article h3 {
     font-size: 0.8em;
     font-family: 'Open Sans', sans-serif;
     max-width: 183px;
+}
+#settingsf {
+    text-align: center;
+}
+.sub {
+    font-size: 1.3em;
+    font-family: 'Open Sans', sans-serif;
+}
+.txtin {
+    font-size: 1.3em;
 }
